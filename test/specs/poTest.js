@@ -1,0 +1,35 @@
+var loginPage = require("../pageObjects/loginPage")
+var reviewPage = require("../pageObjects//reviewPage")
+var shop = require("../pageObjects/shop")
+var chai = require("chai").expect
+describe("Page Object", ()=>{
+    xit ("Login successfully with Page Object", ()=>{
+        browser.url("https://rahulshettyacademy.com/loginpagePractise/#")
+        loginPage.Login("rahulshettyacademy","learning")
+        loginPage.signin_btn.click()
+        loginPage.checkout_btn.waitForExist()
+        // Timeout for all Waitfor method is in wdio.conf.js file
+        // const pageTitle =   $(`//title`).getTitle()
+        // console.log(pageTitle)
+        expect(browser).toHaveTitle("ProtoCommerce")
+    })
+    xit("End to End demo", ()=>{
+        var productNames = ["Blackberry", "Nokia Edge"]
+        browser.url("https://rahulshettyacademy.com/loginpagePractise/#") 
+        loginPage.Login("rahulshettyacademy","learning")
+        loginPage.signin_btn.click()
+        loginPage.checkout_btn.waitForExist()
+        shop.addToCart(productNames)
+        shop.checkout_btn.click()
+        var sumOfProducts = reviewPage.sumOfProducts()
+        var totalPrice = reviewPage.totalPriceValue()
+        chai(sumOfProducts).to.be.equal(totalPrice)
+        reviewPage.success_btn.click()
+        reviewPage.enterCountry("Ind")
+        reviewPage.loading_icon.waitForExist({reverse: true})
+        reviewPage.countryResult.click()
+        reviewPage.submit_btn.click()
+        expect(reviewPage.alert_msg).toHaveTextContaining("Success")
+        browser.pause(2000)
+    })
+})

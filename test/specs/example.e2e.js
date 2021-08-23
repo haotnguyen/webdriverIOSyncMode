@@ -1,6 +1,6 @@
 // Mocha Test Framework 
  describe('My Login application', () => {
-      it('Login faile page title', () => {
+      xit('Login faile page title', () => {
         browser.url("https://rahulshettyacademy.com/loginpagePractise/#")
         console.log(browser.getTitle())
         expect(browser).toHaveTitleContaining("Rahul Shetty Academy")
@@ -24,7 +24,7 @@
         console.log(txt)
         expect(txt).toHaveText("(username is rahulshettyacademy and Password is learning)")
     });
-    xit("Login sucessfully", async () =>{
+    it("Login sucessfully",  () =>{
         //Add x before it will skip the test case when executing
         browser.url("https://rahulshettyacademy.com/loginpagePractise/#")
         const input_username = $(`//*[@id="username"]`)
