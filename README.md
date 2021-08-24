@@ -13,7 +13,7 @@ This is a demo project on how to use WebdriverIO using Sync Mode (**Node version
 npm install
 ```
 
-**To run all test file in spec folderm run this command:**
+**To run all test file in spec folder run this command:**
 ```
 npx wdio run ./wdio.conf.js
 ```
