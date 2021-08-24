@@ -3,8 +3,10 @@ var reviewPage = require("../pageObjects//reviewPage")
 var shop = require("../pageObjects/shop")
 var chai = require("chai").expect
 describe("Page Object", ()=>{
-    xit ("Login successfully with Page Object", ()=>{
-        browser.url("https://rahulshettyacademy.com/loginpagePractise/#")
+    it ("Login successfully with Page Object (UAT)", function()
+    {   
+        // this.retries(2)
+        browser.url("/loginpagePractise/#")
         loginPage.Login("rahulshettyacademy","learning")
         loginPage.signin_btn.click()
         loginPage.checkout_btn.waitForExist()
@@ -13,7 +15,7 @@ describe("Page Object", ()=>{
         // console.log(pageTitle)
         expect(browser).toHaveTitle("ProtoCommerce")
     })
-    xit("End to End demo", ()=>{
+    it("End to End demo", ()=>{
         var productNames = ["Blackberry", "Nokia Edge"]
         browser.url("https://rahulshettyacademy.com/loginpagePractise/#") 
         loginPage.Login("rahulshettyacademy","learning")

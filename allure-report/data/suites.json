@@ -1,0 +1,61 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "Functional Testing on Application",
+    "children" : [ {
+      "name" : "Scrolling and mouse hover",
+      "uid" : "d60584498c26b13f",
+      "parentUid" : "30e45bcfaef9a43d6167d86873d729b7",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1629797071102,
+        "stop" : 1629797071102,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Double click to show alert message",
+      "uid" : "8f411433c4510fe1",
+      "parentUid" : "30e45bcfaef9a43d6167d86873d729b7",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1629797071103,
+        "stop" : 1629797071103,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Web table sort validation",
+      "uid" : "5b41ce55ebe7e936",
+      "parentUid" : "30e45bcfaef9a43d6167d86873d729b7",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1629797071103,
+        "stop" : 1629797071103,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Web table filter validation",
+      "uid" : "b23f861b975befe8",
+      "parentUid" : "30e45bcfaef9a43d6167d86873d729b7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1629797071104,
+        "stop" : 1629797072580,
+        "duration" : 1476
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome-92.0.4515.159" ]
+    } ],
+    "uid" : "30e45bcfaef9a43d6167d86873d729b7"
+  } ],
+  "name" : "suites"
+}

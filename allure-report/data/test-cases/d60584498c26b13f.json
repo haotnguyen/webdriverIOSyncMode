@@ -1,0 +1,89 @@
+{
+  "uid" : "d60584498c26b13f",
+  "name" : "Scrolling and mouse hover",
+  "fullName" : "Functional Testing on Application.Scrolling and mouse hover",
+  "historyId" : "b3ffe8105ca06e81f7caa22d78768a6d",
+  "time" : {
+    "start" : 1629797071102,
+    "stop" : 1629797071102,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "Test ignored",
+  "statusTrace" : "undefined",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "Functional Testing on Application"
+  }, {
+    "name" : "testClass",
+    "value" : "Functional Testing on Application"
+  }, {
+    "name" : "testMethod",
+    "value" : "Scrolling and mouse hover"
+  }, {
+    "name" : "package",
+    "value" : "Functional Testing on Application"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 4,
+        "passed" : 0,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "52f533a30d251e7e",
+        "reportUrl" : "http://jenkins.haotnguyen.com:8080/job/WedriverIO%20Sync%20Mode/10/allure/#testresult/52f533a30d251e7e",
+        "status" : "skipped",
+        "statusDetails" : "Test ignored",
+        "time" : {
+          "start" : 1629796779665,
+          "stop" : 1629796779665,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "261993d1d7fff729",
+        "reportUrl" : "http://jenkins.haotnguyen.com:8080/job/WedriverIO%20Sync%20Mode/9/allure/#testresult/261993d1d7fff729",
+        "status" : "skipped",
+        "statusDetails" : "Test ignored",
+        "time" : {
+          "start" : 1629796596379,
+          "stop" : 1629796596379,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "9c78b3f5ddbdca2e",
+        "reportUrl" : "http://jenkins.haotnguyen.com:8080/job/WedriverIO%20Sync%20Mode/8/allure/#testresult/9c78b3f5ddbdca2e",
+        "status" : "skipped",
+        "statusDetails" : "Test ignored",
+        "time" : {
+          "start" : 1629796329682,
+          "stop" : 1629796329682,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "d60584498c26b13f.json",
+  "parameterValues" : [ ]
+}

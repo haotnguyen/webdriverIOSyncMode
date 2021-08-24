@@ -35,7 +35,7 @@ describe("Windows and Frames Miscellanous", ()=>{
         // newWindow() receives a URL as a string, with some optional options. This will create a new tab in current window
         // but it also count as a window
     })
-    it("Frame switch", ()=>{
+    xit("Frame switch", ()=>{
         browser.url("https://rahulshettyacademy.com/AutomationPractice/")
         const mouseHover =  $(`//button[@id="mousehover"]`)
         mouseHover.scrollIntoView()

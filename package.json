@@ -4,11 +4,15 @@
   "description": "This is a project to present WebDriverIO using Sync Mode with Node version 14.17.5 (LTS Version)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "uiControlsSuite": "npx wdio run ./wdio.conf.js --suite uiControls",
+    "allure-report-generate": "allure generate allure-results --clean && allure open",
+    "poTest": "npx wdio run ./wdio.conf.js --spec poTest.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@wdio/allure-reporter": "^7.10.1",
     "@wdio/cli": "^7.9.1",
     "@wdio/firefox-profile-service": "^7.8.0",
     "@wdio/local-runner": "^7.9.1",
@@ -16,7 +20,9 @@
     "@wdio/selenium-standalone-service": "^7.8.0",
     "@wdio/spec-reporter": "^7.9.0",
     "@wdio/sync": "^7.9.1",
+    "allure-commandline": "^2.13.8",
     "chromedriver": "^92.0.1",
+    "deepmerge": "^4.2.2",
     "wdio-chromedriver-service": "^7.2.0"
   },
   "dependencies": {

@@ -1,0 +1,15 @@
+{
+  "total" : 1,
+  "items" : [ {
+    "uid" : "30e45bcfaef9a43d6167d86873d729b7",
+    "name" : "Functional Testing on Application",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 3,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 4
+    }
+  } ]
+}

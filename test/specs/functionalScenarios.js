@@ -63,7 +63,7 @@ describe("Functional Testing on Application", ()=>{
         console.log(vegetableNamesAfterSort)
         chai(originalVegetableNames).to.eql(vegetableNamesAfterSort)
     })
-    xit("Web table filter validation", ()=>{
+    it("Web table filter validation", ()=>{
         browser.url("https://rahulshettyacademy.com/seleniumPractise/#/offers")
         // Enter "tomato" to search field
         // The result returns 1 value

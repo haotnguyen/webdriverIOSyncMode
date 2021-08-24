@@ -1,0 +1,29 @@
+[ {
+  "buildOrder" : 11,
+  "reportUrl" : "http://jenkins.haotnguyen.com:8080/job/WedriverIO%20Sync%20Mode/11/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 1478
+  }
+}, {
+  "buildOrder" : 10,
+  "reportUrl" : "http://jenkins.haotnguyen.com:8080/job/WedriverIO%20Sync%20Mode/10/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 7770674
+  }
+}, {
+  "buildOrder" : 9,
+  "reportUrl" : "http://jenkins.haotnguyen.com:8080/job/WedriverIO%20Sync%20Mode/9/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 7586616
+  }
+}, {
+  "buildOrder" : 8,
+  "reportUrl" : "http://jenkins.haotnguyen.com:8080/job/WedriverIO%20Sync%20Mode/8/allure",
+  "reportName" : "AllureReport",
+  "data" : {
+    "duration" : 7319929
+  }
+} ]

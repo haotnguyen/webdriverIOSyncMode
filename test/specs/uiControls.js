@@ -1,7 +1,7 @@
 var chai = require("chai").expect
 
 describe("Ecommerce Application", ()=> {
-    it("UI Controls", ()=>{
+    it("UI Controls (Smoke)", ()=>{
         browser.url("https://rahulshettyacademy.com/loginpagePractise/#")
         const input_username = $(`//*[@id="username"]`)
         input_username.setValue("rahulshettyacademy")
@@ -37,16 +37,16 @@ describe("Ecommerce Application", ()=> {
         const dropdownList =  $(`//select[@class="form-control"]`)
         dropdownList.selectByAttribute("value", "teach")
         browser.pause(2000)
-        dropdownList.selectByVisibleText("Consultant")
-        browser.pause(2000)
-        dropdownList.selectByIndex(0)
-        browser.pause(2000)
+        // dropdownList.selectByVisibleText("Consultant")
+        // browser.pause(2000)
+        // dropdownList.selectByIndex(0)
+        // browser.pause(2000)
         var valueResult =  dropdownList.getValue()
         // Chai is one library supports assertions
         // Download Chai library with command: npm install chai
-        chai(valueResult).to.equal("teach")
+        chai(valueResult).to.equal("stud")
     })
-    it("Dynamic dropdown control", ()=>{
+    it("Dynamic dropdown control (Smoke)", ()=>{
         browser.url("https://rahulshettyacademy.com/AutomationPractice/")
         const input_dropdown =  $(`//input[@id="autocomplete"]`)
         input_dropdown.setValue(`ind`)
@@ -61,18 +61,20 @@ describe("Ecommerce Application", ()=> {
             return text === "India"})
         console.log(dropdownListValue.length)
         dropdownListValue[0].click()
+        expect(dropdownListValue[0]).toBeSelected()
         browser.pause(3000)
     })
-    it("Checkbox Identifications",  ()=>{
+    it("Checkbox Identifications (Smoke)",  ()=>{
         browser.url("https://rahulshettyacademy.com/AutomationPractice/")
         const checkbox =  $$(`//input[@type="checkbox"]`)
         checkbox[1].click()
         browser.pause(2000)
         // Verify whether checkbox is selected or not
-        console.log( checkbox[1].isSelected())
-        console.log( checkbox[0].isSelected())
+        // console.log( checkbox[1].isSelected())
+        // console.log( checkbox[0].isSelected())
+        expect(checkbox[1]).toBeSelected()
         // Take a screenshot
-        browser.saveScreenshot("screenshot.png")
+        // browser.saveScreenshot("screenshot.png")
 
     })
 })

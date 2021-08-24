@@ -1,0 +1,10 @@
+[ {
+  "name" : "Jenkins",
+  "type" : "jenkins",
+  "url" : "http://jenkins.haotnguyen.com:8080/",
+  "buildOrder" : 11,
+  "buildName" : "WedriverIO Sync Mode #11",
+  "buildUrl" : "http://jenkins.haotnguyen.com:8080/job/WedriverIO%20Sync%20Mode/11/",
+  "reportName" : "AllureReport",
+  "reportUrl" : "http://jenkins.haotnguyen.com:8080/job/WedriverIO%20Sync%20Mode/11/allure"
+} ]

@@ -20,6 +20,10 @@ exports.config = {
     // then the current working directory is where your `package.json` resides, so `wdio`
     // will be called from there.
     //
+    suites: {
+        uiControls: ['test/specs/uiControls.js', 'test/specs/functionalScenarios.js'],
+        poTest: ['test/specs/poTest.js']
+    },
     specs: [
         './test/specs/**/*.js'
     ],
@@ -55,7 +59,7 @@ exports.config = {
     //     // maxInstances can get overwritten per capability. So if you have an in-house Selenium
     //     // grid with only 5 firefox instances available you can make sure that not more than
     //     // 5 instances get started at a time.
-        maxInstances: 3,
+        maxInstances: 4,
         //
         browserName: 'chrome',
     //     // 'goog:chromeOptions': {
@@ -72,12 +76,12 @@ exports.config = {
     //     // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
     //     // excludeDriverLogs: ['bugreport', 'server'],
     }, 
-    {
+    // {
         // maxInstances can get overwritten per capability. So if you have an in house Selenium
         // grid with only 5 firefox instance available you can make sure that not more than
         // 5 instance gets started at a time.
-        maxInstances: 3,
-        browserName: 'firefox',
+        // maxInstances: 3,
+        // browserName: 'firefox',
         // specs: [
         //     'test/specs/poTest.js'
         // ],
@@ -92,7 +96,8 @@ exports.config = {
         //
         // Parameter to ignore some or all Puppeteer default arguments
         // ignoreDefaultArgs: ['-foreground'], // set value to true to ignore all default arguments
-    }],
+    // }
+],
     //
     // ===================
     // Test Configurations
@@ -124,7 +129,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: 'https://rahulshettyacademy.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -141,7 +146,8 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     // 'chromedriver'
-    services: ['selenium-standalone', 'chromedriver'],
+    // 'selenium-standalone'
+    services: ['chromedriver'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -168,6 +174,10 @@ exports.config = {
 
     
     //
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverScreenshotsReporting: false,
+    }]],
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
@@ -251,8 +261,11 @@ exports.config = {
     /**
      * Function to be executed after a test (in Mocha/Jasmine).
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+    afterTest: function(test, context, { error, result, duration, passed, retries }) {
+        if (error){
+            browser.takeScreenshot()
+        }
+    },
 
 
     /**
